@@ -46,7 +46,9 @@ public class RNShareModule extends ReactContextBaseJavaModule {
         pinterest,
         messenger,
         snapchat,
-        sms;
+        sms,
+        vkontakte,
+        odnoklassniki;
 
 
         public static ShareIntent getShareClass(String social, ReactApplicationContext reactContext) {
