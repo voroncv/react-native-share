@@ -43,9 +43,10 @@
 #import "GenericShare.h"
 #import "WhatsAppShare.h"
 #import "InstagramShare.h"
-#import "InstagramStories.h"
 #import "GooglePlusShare.h"
 #import "EmailShare.h"
+#import "VkontakteShare.h"
+#import "OdnoklassnikiShare.h"
 
 @implementation RNShare
 - (dispatch_queue_t)methodQueue
@@ -79,12 +80,9 @@ RCT_EXPORT_MODULE()
     @"GOOGLEPLUS": @"googleplus",
     @"WHATSAPP": @"whatsapp",
     @"INSTAGRAM": @"instagram",
-    @"INSTAGRAM_STORIES": @"instagram-stories",
     @"EMAIL": @"email",
-    
-    @"SHARE_BACKGROUND_IMAGE": @"shareBackgroundImage",
-    @"SHARE_STICKER_IMAGE": @"shareStickerImage",
-    @"SHARE_BACKGROUND_AND_STICKER_IMAGE": @"shareBackgroundAndStickerImage",
+    @"VKONTAKTE": @"vkontakte",
+    @"ODNOKLASSNIKI": @"odnoklassniki",
   };
 }
 
@@ -116,13 +114,17 @@ RCT_EXPORT_METHOD(shareSingle:(NSDictionary *)options
             NSLog(@"TRY OPEN instagram");
             InstagramShare *shareCtl = [[InstagramShare alloc] init];
             [shareCtl shareSingle:options failureCallback: failureCallback successCallback: successCallback];
-        } else if([social isEqualToString:@"instagram-stories"]) {
-            NSLog(@"TRY OPEN instagram-stories");
-            InstagramStories *shareCtl = [[InstagramStories alloc] init];
-            [shareCtl shareSingle:options failureCallback: failureCallback successCallback: successCallback];
         } else if([social isEqualToString:@"email"]) {
             NSLog(@"TRY OPEN email");
             EmailShare *shareCtl = [[EmailShare alloc] init];
+            [shareCtl shareSingle:options failureCallback: failureCallback successCallback: successCallback];
+        } else if([social isEqualToString:@"vkontakte"]) {
+            NSLog(@"TRY OPEN vkontakte");
+            VkontakteShare *shareCtl = [[VkontakteShare alloc] init];
+            [shareCtl shareSingle:options failureCallback: failureCallback successCallback: successCallback];
+        } else if([social isEqualToString:@"odnoklassniki"]) {
+            NSLog(@"TRY OPEN odnoklassniki");
+            OdnoklassnikiShare *shareCtl = [[OdnoklassnikiShare alloc] init];
             [shareCtl shareSingle:options failureCallback: failureCallback successCallback: successCallback];
         }
     } else {

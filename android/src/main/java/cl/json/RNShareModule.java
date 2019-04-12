@@ -28,6 +28,8 @@ import cl.json.social.PinterestShare;
 import cl.json.social.SnapChatShare;
 import cl.json.social.SMSShare;
 import cl.json.social.MessengerShare;
+import cl.json.social.VkontakteShare;
+import cl.json.social.OdnoklassnikiShare;
 
 public class RNShareModule extends ReactContextBaseJavaModule {
 
@@ -74,6 +76,10 @@ public class RNShareModule extends ReactContextBaseJavaModule {
                     return new SnapChatShare(reactContext);
                 case messenger:
                     return new  MessengerShare(reactContext);
+                case vkontakte:
+                    return new VkontakteShare(reactContext);
+                case odnoklassniki:
+                    return new OdnoklassnikiShare(reactContext);
                 default:
                     return null;
             }

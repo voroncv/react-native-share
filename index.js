@@ -157,6 +157,8 @@ class RNShare {
     GOOGLEPLUS: NativeModules.RNShare.GOOGLEPLUS || 'googleplus',
     EMAIL: NativeModules.RNShare.EMAIL || 'email',
     PINTEREST: NativeModules.RNShare.PINTEREST || 'pinterest',
+    VKONTAKTE: NativeModules.RNShare.VKONTAKTE || 'vkontakte',
+    ODNOKLASSNIKI: NativeModules.RNShare.ODNOKLASSNIKI || 'odnoklassniki',
   };
 
   static InstagramStories = {
