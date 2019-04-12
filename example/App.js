@@ -13,7 +13,7 @@ import {
   Button,
   Alert
 } from 'react-native';
-import Share from 'react-native-share';
+import Share from 'rn-share';
 import images from './src/imageBase64';
 
 const instructions = Platform.select({

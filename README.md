@@ -1,4 +1,4 @@
-﻿# react-native-share [![CircleCI](https://circleci.com/gh/react-native-community/react-native-share/tree/master.svg?style=svg&circle-token=0c6860240abba4e16bd07df0ea805a72b67b8d41)](https://circleci.com/gh/react-native-community/react-native-share/tree/master) [![npm version](https://badge.fury.io/js/react-native-share.svg)](http://badge.fury.io/js/react-native-share)
+﻿# rn-share [![CircleCI](https://circleci.com/gh/voroncv/rn-share/tree/master.svg?style=svg&circle-token=0c6860240abba4e16bd07df0ea805a72b67b8d41)](https://circleci.com/gh/voroncv/rn-share/tree/master) [![npm version](https://badge.fury.io/js/rn-share.svg)](http://badge.fury.io/js/rn-share)
 Share Social , Sending Simple Data to Other Apps
 
 ***NOTE: React Native now implements share functionality [Read more](https://facebook.github.io/react-native/docs/share.html)***
@@ -14,25 +14,25 @@ This gives you the power to prioritize our work and support the project contribu
 ## Getting started
 
 ### Mostly automatic install
-1. `npm install react-native-share --save`
-2. `react-native link react-native-share`
+1. `npm install rn-share --save`
+2. `react-native link rn-share`
 
 ### Manual install
 
-`npm install react-native-share --save`
+`npm install rn-share --save`
 
-- [iOS](https://github.com/react-native-community/react-native-share#iOS-Install)
+- [iOS](https://github.com/voroncv/rn-share#iOS-Install)
 
-- [Android](https://github.com/react-native-community/react-native-share#Android-Install)
+- [Android](https://github.com/voroncv/rn-share#Android-Install)
 
-- [Windows](https://github.com/react-native-community/react-native-share#Windows-Install)
+- [Windows](https://github.com/voroncv/rn-share#Windows-Install)
 
 
 #### iOS Install
 
-1. `npm install react-native-share --save`
+1. `npm install rn-share --save`
 2. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-3. Go to `node_modules` ➜ `react-native-share` ➜ `ios` and add `RNShare.xcodeproj`
+3. Go to `node_modules` ➜ `rn-share` ➜ `ios` and add `RNShare.xcodeproj`
 4. In XCode, in the project navigator, select your project. Add `libRNShare.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 5. In XCode, in the project navigator, select your project. Add `Social.framework` and `MessageUI.framework` to your project's `General` ➜ `Linked Frameworks and Libraries`
 6. In iOS 9 or higher, You should add app list that you will share.
@@ -53,21 +53,21 @@ If you want to share Whatsapp and Mailto, you should write `LSApplicationQueries
 
 #### Android Install
 
-1. `npm install react-native-share --save`
+1. `npm install rn-share --save`
 2. Open up `android/app/src/main/java/[...]/MainApplication.java`
   - Add `import cl.json.RNSharePackage;` and `import cl.json.ShareApplication;` to the imports at the top of the file
   - Add `new RNSharePackage()` to the list returned by the `getPackages()`
     method
 3. Append the following lines to `android/settings.gradle`:
   	```
-  	include ':react-native-share'
-  	project(':react-native-share').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-share/android')
+  	include ':rn-share'
+  	project(':rn-share').projectDir = new File(rootProject.projectDir, 	'../node_modules/rn-share/android')
   	```
 4. Insert the following lines inside the dependencies block in
    `android/app/build.gradle`:
 
     ```
-      compile project(':react-native-share')
+      compile project(':rn-share')
     ```
 5. Follow this
    [guide](https://developer.android.com/training/secure-file-sharing/setup-sharing.html).
@@ -133,8 +133,8 @@ If you want to share Whatsapp and Mailto, you should write `LSApplicationQueries
 
 [Read it! :D](https://github.com/ReactWindows/react-native)
 
-1. `npm install react-native-share --save`
-2. In Visual Studio add the `RNShare.sln` in `node_modules/react-native-share/windows/RNShare.sln` folder to their solution, reference from their app.
+1. `npm install rn-share --save`
+2. In Visual Studio add the `RNShare.sln` in `node_modules/rn-share/windows/RNShare.sln` folder to their solution, reference from their app.
 2. Open up your `MainPage.cs` app
   - Add `using Cl.Json.RNShare;` to the usings at the top of the file
   - Add `new RNSharePackage()` to the `List<IReactPackage>` returned by the `Packages` method
@@ -206,7 +206,7 @@ Share.isPackageInstalled('com.instagram.android')
 These can be assessed using Share.Social property
 For eg.
 ```javascript
-import Share from 'react-native-share';
+import Share from 'rn-share';
 
 const shareOptions = {
     title: 'Share via',
@@ -254,7 +254,7 @@ import {
   AlertIOS,
   Platform
 } from 'react-native';
-import Share, {ShareSheet, Button} from 'react-native-share';
+import Share, {ShareSheet, Button} from 'rn-share';
 
 class TestShare extends Component {
   constructor(props) {
@@ -542,7 +542,7 @@ static sharePDFWithAndroid(fileUrl, type) {
 These can be assessed using Share.Social property
 For eg.
 ```javascript
-import Share from 'react-native-share';
+import Share from 'rn-share';
 
 const shareOptions = {
     method: Share.InstagramStories.SHARE_BACKGROUND_AND_STICKER_IMAGE,
