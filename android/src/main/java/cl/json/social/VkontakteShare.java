@@ -8,7 +8,7 @@ import com.facebook.react.bridge.ReadableMap;
 public class VkontakteShare extends SingleShareIntent {
 
     private static final String PACKAGE = "com.vkontakte.android";
-    private static final String DEFAULT_WEB_LINK = "https://vk.com/share.php?url={url}";
+    private static final String DEFAULT_WEB_LINK = "https://vk.com/share.php?url={url}&title={title}&comment={message}";
     private static final String PLAY_STORE_LINK = "market://details?id=com.vkontakte.android";
 
     public VkontakteShare(ReactApplicationContext reactContext) {

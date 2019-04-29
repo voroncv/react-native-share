@@ -16,14 +16,14 @@ RCT_EXPORT_MODULE();
     NSLog(@"Try open view");
     
     if ([options objectForKey:@"url"] && [options objectForKey:@"url"] != [NSNull null]) {
-        NSString *url = [NSString stringWithFormat:@"https://vk.com/share.php?url=%@", options[@"url"]];
-        NSURL *gplusURL = [NSURL URLWithString:[url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        NSString *url = [NSString stringWithFormat:@"https://vk.com/share.php?url=%@&title=%@&comment=%@", options[@"url"], options[@"title"], options[@"message"]];
+        NSURL * vkURL = [NSURL URLWithString:[url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         
-        if ([[UIApplication sharedApplication] canOpenURL: gplusURL]) {
-            [[UIApplication sharedApplication] openURL:gplusURL];
+        if ([[UIApplication sharedApplication] canOpenURL: vkURL]) {
+            [[UIApplication sharedApplication] openURL:vkURL];
             successCallback(@[]);
         } else {
-            // Cannot open gplus
+            // Cannot open vk
             NSLog(@"error web intent");
         }
     }

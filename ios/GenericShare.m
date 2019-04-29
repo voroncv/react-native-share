@@ -64,7 +64,7 @@
         }
 
         if ([options[@"social"] isEqualToString:@"facebook"]) {
-          NSString *URL = [NSString stringWithFormat:@"https://www.facebook.com/sharer/sharer.php?u=%@", options[@"url"]];
+          NSString *URL = [NSString stringWithFormat:@"https://www.facebook.com/sharer/sharer.php?u=%@&title=%@", options[@"url"], escapedString];
           [self openScheme:URL];
         }
 

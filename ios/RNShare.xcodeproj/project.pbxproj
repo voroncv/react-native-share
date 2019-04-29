@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E21772E2260C13F00F053AA /* OdnoklassnikiShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E21772B2260C13F00F053AA /* OdnoklassnikiShare.m */; };
 		1E21772F2260C13F00F053AA /* VkontakteShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E21772C2260C13F00F053AA /* VkontakteShare.m */; };
+		1EC1802B22704CBB009D4341 /* FacebookShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1802A22704CBB009D4341 /* FacebookShare.m */; };
 		B33C22851D441713006BCD98 /* GenericShare.m in Sources */ = {isa = PBXBuildFile; fileRef = B33C22841D441713006BCD98 /* GenericShare.m */; };
 		B33C22891D4419E8006BCD98 /* WhatsAppShare.m in Sources */ = {isa = PBXBuildFile; fileRef = B33C22881D4419E8006BCD98 /* WhatsAppShare.m */; };
 		B33C228B1D442577006BCD98 /* EmailShare.m in Sources */ = {isa = PBXBuildFile; fileRef = B33C228A1D442576006BCD98 /* EmailShare.m */; };
@@ -36,6 +37,8 @@
 		1E21772B2260C13F00F053AA /* OdnoklassnikiShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OdnoklassnikiShare.m; sourceTree = "<group>"; };
 		1E21772C2260C13F00F053AA /* VkontakteShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VkontakteShare.m; sourceTree = "<group>"; };
 		1E21772D2260C13F00F053AA /* OdnoklassnikiShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OdnoklassnikiShare.h; sourceTree = "<group>"; };
+		1EC1802922704C95009D4341 /* FacebookShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FacebookShare.h; sourceTree = "<group>"; };
+		1EC1802A22704CBB009D4341 /* FacebookShare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacebookShare.m; sourceTree = "<group>"; };
 		B33C22841D441713006BCD98 /* GenericShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericShare.m; sourceTree = "<group>"; };
 		B33C22861D441723006BCD98 /* GenericShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenericShare.h; sourceTree = "<group>"; };
 		B33C22871D4419DA006BCD98 /* WhatsAppShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhatsAppShare.h; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 				B3EEE48F1D4844F4008422B6 /* GooglePlusShare.h */,
 				FCC7BB4D2214566C00E1EA39 /* InstagramStories.h */,
 				FCC7BB4E221457EF00E1EA39 /* InstagramStories.m */,
+				1EC1802922704C95009D4341 /* FacebookShare.h */,
+				1EC1802A22704CBB009D4341 /* FacebookShare.m */,
 			);
 			name = social;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 				B33C22891D4419E8006BCD98 /* WhatsAppShare.m in Sources */,
 				1E21772F2260C13F00F053AA /* VkontakteShare.m in Sources */,
 				B33C228B1D442577006BCD98 /* EmailShare.m in Sources */,
+				1EC1802B22704CBB009D4341 /* FacebookShare.m in Sources */,
 				FCC7BB4F221457EF00E1EA39 /* InstagramStories.m in Sources */,
 				B33C22851D441713006BCD98 /* GenericShare.m in Sources */,
 			);

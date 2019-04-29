@@ -8,7 +8,7 @@ import com.facebook.react.bridge.ReadableMap;
 public class OdnoklassnikiShare extends SingleShareIntent {
 
     private static final String PACKAGE = "ru.ok.android";
-    private static final String DEFAULT_WEB_LINK = "https://connect.ok.ru/offer?url={url}";
+    private static final String DEFAULT_WEB_LINK = "https://connect.ok.ru/offer?url={url}&title={title}&description={message}";
     private static final String PLAY_STORE_LINK = "market://details?id=ru.ok.android";
 
     public OdnoklassnikiShare(ReactApplicationContext reactContext) {

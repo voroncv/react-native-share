@@ -16,14 +16,14 @@ RCT_EXPORT_MODULE();
     NSLog(@"Try open view");
     
     if ([options objectForKey:@"url"] && [options objectForKey:@"url"] != [NSNull null]) {
-        NSString *url = [NSString stringWithFormat:@"https://connect.ok.ru/offer?url=%@", options[@"url"]];
-        NSURL *gplusURL = [NSURL URLWithString:[url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        NSString *url = [NSString stringWithFormat:@"https://connect.ok.ru/offer?url=%@&title=%@&description=%@", options[@"url"], options[@"title"], options[@"message"]];
+        NSURL *okURL = [NSURL URLWithString:[url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         
-        if ([[UIApplication sharedApplication] canOpenURL: gplusURL]) {
-            [[UIApplication sharedApplication] openURL:gplusURL];
+        if ([[UIApplication sharedApplication] canOpenURL: okURL]) {
+            [[UIApplication sharedApplication] openURL:okURL];
             successCallback(@[]);
         } else {
-            // Cannot open gplus
+            // Cannot open ok
             NSLog(@"error web intent");
         }
     }
