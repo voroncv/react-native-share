@@ -2,13 +2,14 @@
 //  FacebookShare.m
 //  RNShare
 //
-//  Copyright © 2016 Facebook. All rights reserved.
+//  Created by whoami on 15/10/2019.
+//  Copyright © 2019 Facebook. All rights reserved.
 //
 
 #import "FacebookShare.h"
 
 @implementation FacebookShare
-RCT_EXPORT_MODULE();
+    RCT_EXPORT_MODULE();
 - (void)shareSingle:(NSDictionary *)options
     failureCallback:(RCTResponseErrorBlock)failureCallback
     successCallback:(RCTResponseSenderBlock)successCallback {

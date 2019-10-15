@@ -2,7 +2,8 @@
 //  VkontakteShare.m
 //  RNShare
 //
-//  Copyright © 2016 Facebook. All rights reserved.
+//  Created by whoami on 15/10/2019.
+//  Copyright © 2019 Facebook. All rights reserved.
 //
 
 #import "VkontakteShare.h"

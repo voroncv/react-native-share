@@ -1,20 +1,23 @@
 package cl.json.social;
 
 import android.content.ActivityNotFoundException;
+import android.content.Intent;
+import java.io.File;
+import android.os.Environment;
+import android.net.Uri;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReadableMap;
 
 /**
- * Created by disenodosbbcl on 23-07-16.
+ * Created by Malai Mihai on 31-05-19.
  */
-public class OdnoklassnikiShare extends SingleShareIntent {
+public class LinkedinShare extends SingleShareIntent {
 
-    private static final String PACKAGE = "ru.ok.android";
-    private static final String DEFAULT_WEB_LINK = "https://connect.ok.ru/offer?url={url}&title={title}&description={message}";
-    private static final String PLAY_STORE_LINK = "market://details?id=ru.ok.android";
+    private static final String PACKAGE = "com.linkedin.android";
+    private static final String PLAY_STORE_LINK = "market://details?id=com.linkedin.android";
 
-    public OdnoklassnikiShare(ReactApplicationContext reactContext) {
+    public LinkedinShare(ReactApplicationContext reactContext) {
         super(reactContext);
     }
 
@@ -32,7 +35,7 @@ public class OdnoklassnikiShare extends SingleShareIntent {
 
     @Override
     protected String getDefaultWebLink() {
-        return DEFAULT_WEB_LINK;
+        return null;
     }
 
     @Override

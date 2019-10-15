@@ -11,7 +11,7 @@ import com.facebook.react.bridge.ReadableMap;
 public class FacebookShare extends SingleShareIntent {
 
     private static final String PACKAGE = "com.facebook.katana";
-    private static final String DEFAULT_WEB_LINK = "https://www.facebook.com/sharer/sharer.php?u={url}&title={title}&description={message}";
+    private static final String DEFAULT_WEB_LINK = "https://www.facebook.com/sharer/sharer.php?u={url}";
 
     public FacebookShare(ReactApplicationContext reactContext) {
         super(reactContext);

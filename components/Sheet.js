@@ -3,8 +3,8 @@
 import * as React from 'react';
 import { Animated } from 'react-native';
 
-const DEFAULT_ANIMATE_TIME = 300;
 const DEFAULT_BOTTOM = -300;
+const DEFAULT_ANIMATE_TIME = 300;
 
 type Props = {
   children: React.Node,

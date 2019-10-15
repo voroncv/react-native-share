@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E21772E2260C13F00F053AA /* OdnoklassnikiShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E21772B2260C13F00F053AA /* OdnoklassnikiShare.m */; };
-		1E21772F2260C13F00F053AA /* VkontakteShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E21772C2260C13F00F053AA /* VkontakteShare.m */; };
-		1EC1802B22704CBB009D4341 /* FacebookShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1802A22704CBB009D4341 /* FacebookShare.m */; };
+		1E6E26082355AE70005E1C55 /* FacebookShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E26072355AE70005E1C55 /* FacebookShare.m */; };
+		1E6E260B2355B00F005E1C55 /* OdnoklassnikiShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E260A2355B00F005E1C55 /* OdnoklassnikiShare.m */; };
+		1E6E260E2355B0E9005E1C55 /* VkontakteShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E260D2355B0E9005E1C55 /* VkontakteShare.m */; };
 		B33C22851D441713006BCD98 /* GenericShare.m in Sources */ = {isa = PBXBuildFile; fileRef = B33C22841D441713006BCD98 /* GenericShare.m */; };
 		B33C22891D4419E8006BCD98 /* WhatsAppShare.m in Sources */ = {isa = PBXBuildFile; fileRef = B33C22881D4419E8006BCD98 /* WhatsAppShare.m */; };
 		B33C228B1D442577006BCD98 /* EmailShare.m in Sources */ = {isa = PBXBuildFile; fileRef = B33C228A1D442576006BCD98 /* EmailShare.m */; };
 		B3E7B58A1CC2AC0600A0062D /* RNShare.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNShare.m */; };
 		B3EEE48E1D4844E7008422B6 /* GooglePlusShare.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EEE48D1D4844E7008422B6 /* GooglePlusShare.m */; };
 		CE0C76371E9E7DE100ED396E /* InstagramShare.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0C76361E9E7DE100ED396E /* InstagramShare.m */; };
-		FCC7BB4F221457EF00E1EA39 /* InstagramStories.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC7BB4E221457EF00E1EA39 /* InstagramStories.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,12 +32,12 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNShare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNShare.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E21772A2260C13F00F053AA /* VkontakteShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VkontakteShare.h; sourceTree = "<group>"; };
-		1E21772B2260C13F00F053AA /* OdnoklassnikiShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OdnoklassnikiShare.m; sourceTree = "<group>"; };
-		1E21772C2260C13F00F053AA /* VkontakteShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VkontakteShare.m; sourceTree = "<group>"; };
-		1E21772D2260C13F00F053AA /* OdnoklassnikiShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OdnoklassnikiShare.h; sourceTree = "<group>"; };
-		1EC1802922704C95009D4341 /* FacebookShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FacebookShare.h; sourceTree = "<group>"; };
-		1EC1802A22704CBB009D4341 /* FacebookShare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacebookShare.m; sourceTree = "<group>"; };
+		1E6E26062355AE26005E1C55 /* FacebookShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FacebookShare.h; sourceTree = "<group>"; };
+		1E6E26072355AE70005E1C55 /* FacebookShare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacebookShare.m; sourceTree = "<group>"; };
+		1E6E26092355AFEF005E1C55 /* OdnoklassnikiShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OdnoklassnikiShare.h; sourceTree = "<group>"; };
+		1E6E260A2355B00F005E1C55 /* OdnoklassnikiShare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OdnoklassnikiShare.m; sourceTree = "<group>"; };
+		1E6E260C2355B0D2005E1C55 /* VkontakteShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VkontakteShare.h; sourceTree = "<group>"; };
+		1E6E260D2355B0E9005E1C55 /* VkontakteShare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VkontakteShare.m; sourceTree = "<group>"; };
 		B33C22841D441713006BCD98 /* GenericShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericShare.m; sourceTree = "<group>"; };
 		B33C22861D441723006BCD98 /* GenericShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenericShare.h; sourceTree = "<group>"; };
 		B33C22871D4419DA006BCD98 /* WhatsAppShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhatsAppShare.h; sourceTree = "<group>"; };
@@ -51,8 +50,6 @@
 		B3EEE48F1D4844F4008422B6 /* GooglePlusShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GooglePlusShare.h; sourceTree = "<group>"; };
 		CE0C76361E9E7DE100ED396E /* InstagramShare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramShare.m; sourceTree = "<group>"; };
 		CE0C76621E9E869300ED396E /* InstagramShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstagramShare.h; sourceTree = "<group>"; };
-		FCC7BB4D2214566C00E1EA39 /* InstagramStories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstagramStories.h; sourceTree = "<group>"; };
-		FCC7BB4E221457EF00E1EA39 /* InstagramStories.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramStories.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,10 +84,6 @@
 		B33C22801D43F9B0006BCD98 /* social */ = {
 			isa = PBXGroup;
 			children = (
-				1E21772D2260C13F00F053AA /* OdnoklassnikiShare.h */,
-				1E21772B2260C13F00F053AA /* OdnoklassnikiShare.m */,
-				1E21772A2260C13F00F053AA /* VkontakteShare.h */,
-				1E21772C2260C13F00F053AA /* VkontakteShare.m */,
 				CE0C76361E9E7DE100ED396E /* InstagramShare.m */,
 				CE0C76621E9E869300ED396E /* InstagramShare.h */,
 				B33C22841D441713006BCD98 /* GenericShare.m */,
@@ -101,10 +94,12 @@
 				B33C228C1D442583006BCD98 /* EmailShare.h */,
 				B3EEE48D1D4844E7008422B6 /* GooglePlusShare.m */,
 				B3EEE48F1D4844F4008422B6 /* GooglePlusShare.h */,
-				FCC7BB4D2214566C00E1EA39 /* InstagramStories.h */,
-				FCC7BB4E221457EF00E1EA39 /* InstagramStories.m */,
-				1EC1802922704C95009D4341 /* FacebookShare.h */,
-				1EC1802A22704CBB009D4341 /* FacebookShare.m */,
+				1E6E26062355AE26005E1C55 /* FacebookShare.h */,
+				1E6E26072355AE70005E1C55 /* FacebookShare.m */,
+				1E6E26092355AFEF005E1C55 /* OdnoklassnikiShare.h */,
+				1E6E260A2355B00F005E1C55 /* OdnoklassnikiShare.m */,
+				1E6E260C2355B0D2005E1C55 /* VkontakteShare.h */,
+				1E6E260D2355B0E9005E1C55 /* VkontakteShare.m */,
 			);
 			name = social;
 			sourceTree = "<group>";
@@ -148,6 +143,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
@@ -168,12 +164,11 @@
 				CE0C76371E9E7DE100ED396E /* InstagramShare.m in Sources */,
 				B3EEE48E1D4844E7008422B6 /* GooglePlusShare.m in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNShare.m in Sources */,
-				1E21772E2260C13F00F053AA /* OdnoklassnikiShare.m in Sources */,
+				1E6E260B2355B00F005E1C55 /* OdnoklassnikiShare.m in Sources */,
+				1E6E26082355AE70005E1C55 /* FacebookShare.m in Sources */,
+				1E6E260E2355B0E9005E1C55 /* VkontakteShare.m in Sources */,
 				B33C22891D4419E8006BCD98 /* WhatsAppShare.m in Sources */,
-				1E21772F2260C13F00F053AA /* VkontakteShare.m in Sources */,
 				B33C228B1D442577006BCD98 /* EmailShare.m in Sources */,
-				1EC1802B22704CBB009D4341 /* FacebookShare.m in Sources */,
-				FCC7BB4F221457EF00E1EA39 /* InstagramStories.m in Sources */,
 				B33C22851D441713006BCD98 /* GenericShare.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,7 +209,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -248,7 +243,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

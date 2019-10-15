@@ -1,8 +1,9 @@
 //
-//  VkontakteShare.h
+//  FacebookShare.h
 //  RNShare
 //
-//  Copyright © 2016 Facebook. All rights reserved.
+//  Created by whoami on 15/10/2019.
+//  Copyright © 2019 Facebook. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -48,5 +49,5 @@
 #endif
 @interface VkontakteShare : NSObject <RCTBridgeModule>
 
-- (void *) shareSingle:(NSDictionary *)options failureCallback:(RCTResponseErrorBlock)failureCallback successCallback:(RCTResponseSenderBlock)successCallback;
+- (void) shareSingle:(NSDictionary *)options failureCallback:(RCTResponseErrorBlock)failureCallback successCallback:(RCTResponseSenderBlock)successCallback;
 @end

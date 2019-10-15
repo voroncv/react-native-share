@@ -1,10 +1,11 @@
 //
-//  OdnoklassnikiShare
+//  FacebookShare.h
 //  RNShare
 //
-//  Created by Diseño Uno BBCL on 23-07-16.
-//  Copyright © 2016 Facebook. All rights reserved.
+//  Created by whoami on 15/10/2019.
+//  Copyright © 2019 Facebook. All rights reserved.
 //
+
 #import <UIKit/UIKit.h>
 // import RCTConvert
 #if __has_include(<React/RCTConvert.h>)
@@ -48,5 +49,5 @@
 #endif
 @interface OdnoklassnikiShare : NSObject <RCTBridgeModule>
 
-- (void *) shareSingle:(NSDictionary *)options failureCallback:(RCTResponseErrorBlock)failureCallback successCallback:(RCTResponseSenderBlock)successCallback;
+- (void) shareSingle:(NSDictionary *)options failureCallback:(RCTResponseErrorBlock)failureCallback successCallback:(RCTResponseSenderBlock)successCallback;
 @end

@@ -45,8 +45,6 @@
 #import "InstagramShare.h"
 #import "GooglePlusShare.h"
 #import "EmailShare.h"
-#import "VkontakteShare.h"
-#import "OdnoklassnikiShare.h"
 
 @implementation RNShare
 - (dispatch_queue_t)methodQueue
@@ -70,6 +68,15 @@
     }
 }
 
+- (BOOL)isImageMimeType:(NSString *)data {
+    NSRange range = [data rangeOfString:@"data:image" options:NSCaseInsensitiveSearch];
+    if (range.location != NSNotFound) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 RCT_EXPORT_MODULE()
 
 - (NSDictionary *)constantsToExport
@@ -81,8 +88,6 @@ RCT_EXPORT_MODULE()
     @"WHATSAPP": @"whatsapp",
     @"INSTAGRAM": @"instagram",
     @"EMAIL": @"email",
-    @"VKONTAKTE": @"vkontakte",
-    @"ODNOKLASSNIKI": @"odnoklassniki",
   };
 }
 
@@ -93,15 +98,15 @@ RCT_EXPORT_METHOD(shareSingle:(NSDictionary *)options
 
     NSString *social = [RCTConvert NSString:options[@"social"]];
     if (social) {
-        NSLog(social);
+        NSLog(@"%@", social);
         if([social isEqualToString:@"facebook"]) {
             NSLog(@"TRY OPEN FACEBOOK");
             GenericShare *shareCtl = [[GenericShare alloc] init];
-            [shareCtl shareSingle:options failureCallback: failureCallback successCallback: successCallback serviceType: SLServiceTypeFacebook];
+            [shareCtl shareSingle:options failureCallback: failureCallback successCallback: successCallback serviceType: SLServiceTypeFacebook inAppBaseUrl:@"fb://"];
         } else if([social isEqualToString:@"twitter"]) {
             NSLog(@"TRY OPEN Twitter");
             GenericShare *shareCtl = [[GenericShare alloc] init];
-            [shareCtl shareSingle:options failureCallback: failureCallback successCallback: successCallback serviceType: SLServiceTypeTwitter];
+            [shareCtl shareSingle:options failureCallback: failureCallback successCallback: successCallback serviceType: SLServiceTypeTwitter inAppBaseUrl:@"twitter://"];
         } else if([social isEqualToString:@"googleplus"]) {
             NSLog(@"TRY OPEN google plus");
             GooglePlusShare *shareCtl = [[GooglePlusShare alloc] init];
@@ -113,18 +118,14 @@ RCT_EXPORT_METHOD(shareSingle:(NSDictionary *)options
         } else if([social isEqualToString:@"instagram"]) {
             NSLog(@"TRY OPEN instagram");
             InstagramShare *shareCtl = [[InstagramShare alloc] init];
-            [shareCtl shareSingle:options failureCallback: failureCallback successCallback: successCallback];
+            if([self isImageMimeType:options[@"url"]]) {// Condition to handle image
+                [shareCtl shareSingleImage:options failureCallback: failureCallback successCallback: successCallback];
+            } else {
+                [shareCtl shareSingle:options failureCallback: failureCallback successCallback: successCallback];
+            }
         } else if([social isEqualToString:@"email"]) {
             NSLog(@"TRY OPEN email");
             EmailShare *shareCtl = [[EmailShare alloc] init];
-            [shareCtl shareSingle:options failureCallback: failureCallback successCallback: successCallback];
-        } else if([social isEqualToString:@"vkontakte"]) {
-            NSLog(@"TRY OPEN vkontakte");
-            VkontakteShare *shareCtl = [[VkontakteShare alloc] init];
-            [shareCtl shareSingle:options failureCallback: failureCallback successCallback: successCallback];
-        } else if([social isEqualToString:@"odnoklassniki"]) {
-            NSLog(@"TRY OPEN odnoklassniki");
-            OdnoklassnikiShare *shareCtl = [[OdnoklassnikiShare alloc] init];
             [shareCtl shareSingle:options failureCallback: failureCallback successCallback: successCallback];
         }
     } else {
@@ -189,7 +190,7 @@ RCT_EXPORT_METHOD(open:(NSDictionary *)options
     shareController.completionWithItemsHandler = ^(NSString *activityType, BOOL completed, __unused NSArray *returnedItems, NSError *activityError) {
         if (activityError) {
             failureCallback(activityError);
-        } else {
+        } else if (completed) {
             successCallback(@[@(completed), RCTNullIfNil(activityType)]);
         }
     };

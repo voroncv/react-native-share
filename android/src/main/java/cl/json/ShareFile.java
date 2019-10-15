@@ -1,11 +1,7 @@
 package cl.json;
 
-import android.database.Cursor;
 import android.net.Uri;
 import android.os.Environment;
-import android.provider.MediaStore;
-import android.support.v4.content.CursorLoader;
-import android.support.v4.content.FileProvider;
 import android.util.Base64;
 import android.webkit.MimeTypeMap;
 
@@ -24,16 +20,19 @@ public class ShareFile {
     private String url;
     private Uri uri;
     private String type;
+    private String filename;
 
-    public ShareFile(String url, String type, ReactApplicationContext reactContext){
-        this(url, reactContext);
+    public ShareFile(String url, String type, String filename, ReactApplicationContext reactContext){
+        this(url, filename, reactContext);
         this.type = type;
+        this.filename = filename;
     }
 
-    public ShareFile(String url, ReactApplicationContext reactContext){
+    public ShareFile(String url, String filename, ReactApplicationContext reactContext){
         this.url = url;
         this.uri = Uri.parse(this.url);
         this.reactContext = reactContext;
+        this.filename = filename;
     }
     /**
      * Obtain mime type from URL
@@ -98,36 +97,28 @@ public class ShareFile {
         return this.type;
     }
     private String getRealPathFromURI(Uri contentUri) {
-        String[] proj = { MediaStore.Images.Media.DATA };
-        CursorLoader loader = new CursorLoader(this.reactContext, contentUri, proj, null, null, null);
-        Cursor cursor = loader.loadInBackground();
-        String result = null;
-        if (cursor != null && cursor.moveToFirst()) {
-            int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-            result = cursor.getString(column_index);
-            cursor.close();
-        }
+        String result = RNSharePathUtil.getRealPathFromURI(this.reactContext, contentUri);
         return result;
     }
     public Uri getURI() {
 
         final MimeTypeMap mime = MimeTypeMap.getSingleton();
         String extension = mime.getExtensionFromMimeType(getType());
-        final String authority = ((ShareApplication) reactContext.getApplicationContext()).getFileProviderAuthority();
 
         if(this.isBase64File()) {
             String encodedImg = this.uri.getSchemeSpecificPart().substring(this.uri.getSchemeSpecificPart().indexOf(";base64,") + 8);
+            String filename = this.filename != null ? this.filename : System.nanoTime() + "";
             try {
                 File dir = new File(Environment.getExternalStorageDirectory(), Environment.DIRECTORY_DOWNLOADS );
                 if (!dir.exists() && !dir.mkdirs()) {
                     throw new IOException("mkdirs failed on " + dir.getAbsolutePath());
                 }
-                File file = new File(dir, System.nanoTime() + "." + extension);
+                File file = new File(dir, filename + "." + extension);
                 final FileOutputStream fos = new FileOutputStream(file);
                 fos.write(Base64.decode(encodedImg, Base64.DEFAULT));
                 fos.flush();
                 fos.close();
-                return FileProvider.getUriForFile(reactContext, authority, file);
+                return RNSharePathUtil.compatUriFromFile(reactContext, file);
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -137,7 +128,7 @@ public class ShareFile {
             if (uri.getPath() == null) {
                 return null;
             }
-            return FileProvider.getUriForFile(reactContext, authority, new File(uri.getPath()));
+            return RNSharePathUtil.compatUriFromFile(reactContext, new File(uri.getPath()));
         }
 
         return null;
